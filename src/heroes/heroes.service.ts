@@ -103,12 +103,30 @@ export class HeroesService {
       return acc;
     }, 0);
 
+    const antiheroCount = heroes.reduce((acc, hero) => {
+      if (hero.category === 'Antihero') {
+        return acc + 1;
+      }
+
+      return acc;
+    }, 0);
+
+    const civilianCount = heroes.reduce((acc, hero) => {
+      if (hero.category === 'Civilian') {
+        return acc + 1;
+      }
+
+      return acc;
+    }, 0);
+
     return {
       totalHeroes,
       strongestHero,
       smartestHero,
       heroCount,
       villainCount,
+      antiheroCount,
+      civilianCount,
     };
   }
 
