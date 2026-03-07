@@ -143,12 +143,6 @@ export class HeroesService {
       intelligence,
     } = advancedSearchDto;
 
-    if (!name && !team && !category && !universe && !status && !strength) {
-      throw new BadRequestException(
-        'At least one search parameter is required',
-      );
-    }
-
     let filteredHeroes = [...this.heroes];
 
     if (name) {
@@ -159,27 +153,27 @@ export class HeroesService {
       );
     }
 
-    if (team) {
-      filteredHeroes = filteredHeroes.filter((hero) =>
-        hero.team.toLowerCase().includes(team.toLowerCase()),
+    if (team && team !== 'all') {
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.team.toLowerCase() === team.toLowerCase(),
       );
     }
 
-    if (category) {
-      filteredHeroes = filteredHeroes.filter((hero) =>
-        hero.category.toLowerCase().includes(category.toLowerCase()),
+    if (category && category !== 'all') {
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.category.toLowerCase() === category.toLowerCase(),
       );
     }
 
-    if (universe) {
-      filteredHeroes = filteredHeroes.filter((hero) =>
-        hero.universe.toLowerCase().includes(universe.toLowerCase()),
+    if (universe && universe !== 'all') {
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.universe.toLowerCase() === universe.toLowerCase(),
       );
     }
 
-    if (status) {
-      filteredHeroes = filteredHeroes.filter((hero) =>
-        hero.status.toLowerCase().includes(status.toLowerCase()),
+    if (status && status !== 'all') {
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.status.toLowerCase() === status.toLowerCase(),
       );
     }
 
