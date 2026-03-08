@@ -1,4 +1,10 @@
-import { IsNotEmpty, IsString, IsArray, IsNumber } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsNumber,
+  IsObject,
+} from 'class-validator';
 
 export class CreateHeroDto {
   @IsNotEmpty()
@@ -13,6 +19,22 @@ export class CreateHeroDto {
   @IsString()
   alias: string;
 
+  @IsNotEmpty()
+  @IsObject()
+  biography: object;
+
+  @IsNotEmpty()
+  @IsObject()
+  appearance: object;
+
+  @IsNotEmpty()
+  @IsObject()
+  stats: object;
+
+  @IsNotEmpty()
+  @IsObject()
+  connections: object;
+
   @IsArray()
   @IsString({ each: true })
   powers: string[];
@@ -20,22 +42,6 @@ export class CreateHeroDto {
   @IsNotEmpty()
   @IsString()
   description: string;
-
-  @IsNumber()
-  strength: number;
-
-  @IsNumber()
-  intelligence: number;
-
-  @IsNumber()
-  speed: number;
-
-  @IsNumber()
-  durability: number;
-
-  @IsNotEmpty()
-  @IsString()
-  team: string;
 
   @IsNotEmpty()
   @IsString()

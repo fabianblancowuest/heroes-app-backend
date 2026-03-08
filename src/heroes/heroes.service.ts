@@ -15,15 +15,13 @@ export class HeroesService {
   private heroes: Hero[] = structuredClone(heroesData);
 
   create(createHeroDto: CreateHeroDto) {
-    const hero = {
+    const newHero: Hero = {
+      id: Math.random().toString(36).substring(2),
       ...createHeroDto,
-      id: `${this.heroes.length + 1}`,
-      slug: createHeroDto.name.toLowerCase().replace(/ /g, '-'),
-    };
+    } as Hero;
 
-    this.heroes.push(hero);
-
-    return hero;
+    this.heroes.push(newHero);
+    return newHero;
   }
 
   findAll(paginationDto: PaginationDto) {
@@ -81,10 +79,10 @@ export class HeroesService {
     const heroes = this.heroes;
     const totalHeroes = heroes.length;
     const strongestHero = heroes.reduce((max, hero) =>
-      hero.strength > max.strength ? hero : max,
+      hero.stats.strength > max.stats.strength ? hero : max,
     );
     const smartestHero = heroes.reduce((max, hero) =>
-      hero.intelligence > max.intelligence ? hero : max,
+      hero.stats.intelligence > max.stats.intelligence ? hero : max,
     );
 
     const heroCount = heroes.reduce((acc, hero) => {
@@ -154,8 +152,8 @@ export class HeroesService {
     }
 
     if (team && team !== 'all') {
-      filteredHeroes = filteredHeroes.filter(
-        (hero) => hero.team.toLowerCase() === team.toLowerCase(),
+      filteredHeroes = filteredHeroes.filter((hero) =>
+        hero.connections.groupAffiliation.find((item) => item === team),
       );
     }
 
@@ -179,23 +177,25 @@ export class HeroesService {
 
     if (strength) {
       filteredHeroes = filteredHeroes.filter(
-        (hero) => hero.strength >= strength,
+        (hero) => hero.stats.strength >= strength,
       );
     }
 
     if (speed) {
-      filteredHeroes = filteredHeroes.filter((hero) => hero.speed >= speed);
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.stats.speed >= speed,
+      );
     }
 
     if (durability) {
       filteredHeroes = filteredHeroes.filter(
-        (hero) => hero.durability >= durability,
+        (hero) => hero.stats.durability >= durability,
       );
     }
 
     if (intelligence) {
       filteredHeroes = filteredHeroes.filter(
-        (hero) => hero.intelligence >= intelligence,
+        (hero) => hero.stats.intelligence >= intelligence,
       );
     }
 
