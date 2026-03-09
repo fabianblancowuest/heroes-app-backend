@@ -522,7 +522,7 @@ export const charactersOne: Hero[] = [
     id: '11',
     name: 'Hal Jordan',
     slug: 'hal-jordan',
-    alias: 'Linterna Verde',
+    alias: 'Green Lantern',
     biography: {
       fullName: 'Harold "Hal" Jordan',
       placeOfBirth: 'Coast City, California',
@@ -759,7 +759,7 @@ export const charactersOne: Hero[] = [
     id: '20',
     name: 'Ororo Munroe',
     slug: 'ororo-munroe',
-    alias: 'Tormenta',
+    alias: 'Storm',
     biography: {
       fullName: 'Ororo Munroe',
       placeOfBirth: 'Nueva York (Harlem)',
@@ -816,7 +816,7 @@ export const charactersOne: Hero[] = [
     id: '24',
     name: 'Charles Xavier',
     slug: 'charles-xavier',
-    alias: 'Profesor X',
+    alias: 'Professor X',
     biography: {
       fullName: 'Charles Francis Xavier',
       placeOfBirth: 'Nueva York',
@@ -874,7 +874,7 @@ export const charactersOne: Hero[] = [
     id: '26',
     name: 'Barbara Gordon',
     slug: 'barbara-gordon',
-    alias: 'Batichica',
+    alias: 'Batgirl',
     biography: {
       fullName: 'Barbara Joan Gordon',
       placeOfBirth: 'Gotham City',
@@ -993,7 +993,7 @@ export const charactersOne: Hero[] = [
     id: '29',
     name: "T'Challa",
     slug: 't-challa',
-    alias: 'Pantera Negra',
+    alias: 'Black Panther',
     biography: {
       fullName: "T'Challa",
       placeOfBirth: 'Wakanda',

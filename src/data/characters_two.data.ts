@@ -1805,8 +1805,8 @@ export const charactersTwo: Hero[] = [
   },
   {
     id: '136',
-    alias: 'Black Widow (Antihero Version)',
-    slug: 'black-widow-antihero',
+    alias: 'Black Widow',
+    slug: 'black-widow',
     name: 'Natasha Romanoff',
     biography: {
       fullName: 'Natalia Alianovna Romanova',

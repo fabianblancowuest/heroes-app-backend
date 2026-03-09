@@ -78,11 +78,16 @@ export class HeroesService {
   getHeroSummary() {
     const heroes = this.heroes;
     const totalHeroes = heroes.length;
-    const strongestHero = heroes.reduce((max, hero) =>
-      hero.stats.strength > max.stats.strength ? hero : max,
-    );
-    const smartestHero = heroes.reduce((max, hero) =>
-      hero.stats.intelligence > max.stats.intelligence ? hero : max,
+    // const strongestHero = heroes.reduce((max, hero) =>
+    //   hero.stats.strength > max.stats.strength ? hero : max,
+    // );
+    // const smartestHero = heroes.reduce((max, hero) =>
+    //   hero.stats.intelligence > max.stats.intelligence ? hero : max,
+    // );
+
+    const strongestHeroes = heroes.filter((hero) => hero.stats.strength === 10);
+    const smartestHeroes = heroes.filter(
+      (hero) => hero.stats.intelligence === 10,
     );
 
     const heroCount = heroes.reduce((acc, hero) => {
@@ -119,8 +124,8 @@ export class HeroesService {
 
     return {
       totalHeroes,
-      strongestHero,
-      smartestHero,
+      strongestHeroes,
+      smartestHeroes,
       heroCount,
       villainCount,
       antiheroCount,
