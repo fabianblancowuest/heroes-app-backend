@@ -197,7 +197,7 @@ export const moreAntiheroes: Hero[] = [
     weaknesses: ['Debilidad fuera del agua'],
     description:
       'Rey atlante orgulloso cuya lealtad está con su reino antes que con la humanidad.',
-    image: '151.jpg',
+    image: '151_.jpg',
     image2: '151_alt.jpg',
     firstAppearance: '1939',
     firstAppearanceComic: 'Marvel Comics #1 (1939)',
@@ -436,7 +436,7 @@ export const moreAntiheroes: Hero[] = [
     weaknesses: ['Humana mejorada'],
     description:
       'Mercenaria mutante cuya suerte improbable la protege en combate.',
-    image: '156.jpg',
+    image: '156_.jpg',
     image2: '156_alt.jpg',
     firstAppearance: '1991',
     firstAppearanceComic: 'X-Force #8 (1991)',
@@ -487,7 +487,7 @@ export const moreAntiheroes: Hero[] = [
     weaknesses: ['Comportamiento violento'],
     description:
       'Cazarrecompensas intergaláctico brutal y extremadamente difícil de matar.',
-    image: '157.jpg',
+    image: '157.avif',
     image2: '157_alt.jpg',
     firstAppearance: '1983',
     firstAppearanceComic: 'Omega Men #3 (1983)',
@@ -537,7 +537,7 @@ export const moreAntiheroes: Hero[] = [
     weaknesses: ['Lavado de cerebro'],
     description:
       'Guerrero religioso entrenado como asesino por una orden secreta.',
-    image: '158.jpg',
+    image: '158_.jpg',
     image2: '158_alt.jpg',
     firstAppearance: '1992',
     firstAppearanceComic: 'Batman: Sword of Azrael #1 (1992)',
@@ -583,7 +583,7 @@ export const moreAntiheroes: Hero[] = [
     weaknesses: ['Impulsividad'],
     description:
       'Vigilante brutal de Gotham que combate el crimen con métodos extremos.',
-    image: '159.jpg',
+    image: '159.avif',
     image2: '159_alt.jpg',
     firstAppearance: '1989',
     firstAppearanceComic: 'The Huntress #1 (1989)',
