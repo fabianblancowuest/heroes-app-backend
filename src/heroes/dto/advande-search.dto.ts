@@ -37,4 +37,8 @@ export class AdvancedSearchDto {
   @IsNumber()
   @IsOptional()
   intelligence?: number;
+
+  @IsNumber()
+  @IsOptional()
+  combat?: number;
 }

@@ -1310,7 +1310,7 @@ export const charactersTwo: Hero[] = [
     weaknesses: ['Sin metal, poder limitado', 'Traumas del pasado'],
     description:
       'Mutante maestro del magnetismo, líder de la Hermandad de Mutantes y enemigo recurrente de los X-Men.',
-    image: '109.webp',
+    image: '109.jpg',
     image2: '109_alt.webp',
     firstAppearance: '1963',
     firstAppearanceComic: 'X-Men #1 (1963)',

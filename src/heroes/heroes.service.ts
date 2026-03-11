@@ -144,6 +144,7 @@ export class HeroesService {
       speed,
       durability,
       intelligence,
+      combat,
     } = advancedSearchDto;
 
     let filteredHeroes = [...this.heroes];
@@ -201,6 +202,12 @@ export class HeroesService {
     if (intelligence) {
       filteredHeroes = filteredHeroes.filter(
         (hero) => hero.stats.intelligence >= intelligence,
+      );
+    }
+
+    if (combat) {
+      filteredHeroes = filteredHeroes.filter(
+        (hero) => hero.stats.combat >= combat,
       );
     }
 
